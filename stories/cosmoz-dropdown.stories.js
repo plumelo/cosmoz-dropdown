@@ -10,7 +10,7 @@ const Dropdown = () => `<cosmoz-dropdown>
 		<div>Item 3</div>
 		<div>Item 4</div>
 		<div>Item 5</div>
-		<button>Item 6</div>
+		<button>Item 6</button>
 	</cosmoz-dropdown>`,
 	DropdownMenu = () => `<cosmoz-dropdown-menu>
 		<div>Item 1</div>

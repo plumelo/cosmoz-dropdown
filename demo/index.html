@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>cosmoz-dropdown demo</title>
+		<script type="module">
+			import '../dist/index.js';
+		</script>
+		<style>
+			.vertical-section-container {
+				position: relative;
+				z-index: 999;
+			}
+
+			cosmoz-dropdown .stack {
+				position: relative;
+				z-index: 1;
+				opacity: 0.99;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="vertical-section-container">
+			<h3>Cosmoz dropdown with stacking context</h3>
+			<p>Show stacking context dropdown bug</p>
+			<cosmoz-dropdown>
+				<div class="stack">
+					<div>Item 1</div>
+					<div>Item 2</div>
+					<div>Item 3</div>
+					<div>Item 4</div>
+					<div>Item 5</div>
+					<button>Item 6</button>
+				</div>
+			</cosmoz-dropdown>
+		</div>
+	</body>
+</html>
