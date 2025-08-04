@@ -1,3 +1,9 @@
+## [6.2.1](https://github.com/neovici/cosmoz-dropdown/compare/v6.2.0...v6.2.1) (2025-08-04)
+
+### Bug Fixes
+
+* automerge workflow ([b9b7f82](https://github.com/neovici/cosmoz-dropdown/commit/b9b7f824140e46bae1d9bde023079b7c917f1cc2))
+
 ## [6.2.0](https://github.com/neovici/cosmoz-dropdown/compare/v6.1.0...v6.2.0) (2025-07-21)
 
 ### Features
