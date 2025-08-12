@@ -62,7 +62,6 @@ export const useFocus = ({ disabled, onFocus }: UseFocusOpts) => {
 			(e: FocusEvent) => {
 				const focused = isFocused(e.currentTarget as HTMLElement);
 				setState((p) => ({
-					...p,
 					focused,
 					closed: focused ? p?.closed : true,
 				}));
