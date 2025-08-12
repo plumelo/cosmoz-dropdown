@@ -49,6 +49,10 @@ const style = css`
 			--cosmoz-dropdown-button-hover-bg-color,
 			var(--cosmoz-button-hover-bg-color, #3a3f44)
 		);
+		color: var(
+			--cosmoz-dropdown-button-hover-color,
+			var(--cosmoz-dropdown-button-color, var(--cosmoz-button-color, #fff)) ;
+		);
 	}
 	::slotted(svg) {
 		pointer-events: none;
