@@ -64,12 +64,13 @@ const style = css`
 
 const Dropdown = (host: HTMLElement & Props) => {
 	const { placement, strategy, middleware, render } = host;
-	const { active, onToggle } = useHostFocus(host);
+	const { active, onToggle, setClosed } = useHostFocus(host);
 	const { styles, setReference, setFloating } = useFloating({
 		placement,
 		strategy,
 		middleware,
 	});
+
 	return html` <div class="anchor" part="anchor" ${ref(setReference)}>
 			<button
 				@mousedown=${preventDefault}
@@ -90,6 +91,13 @@ const Dropdown = (host: HTMLElement & Props) => {
 					exportparts="wrap, content"
 					style="${styleMap(styles)}"
 					@connected=${(e: Event) => (e.target as HTMLElement).showPopover?.()}
+					@click=${(e: Event) => {
+						const target = e.target as HTMLElement;
+
+						if (target && target !== e.currentTarget) {
+							setClosed(true);
+						}
+					}}
 					${ref(setFloating)}
 					><slot></slot>${guard(
 						[render],
