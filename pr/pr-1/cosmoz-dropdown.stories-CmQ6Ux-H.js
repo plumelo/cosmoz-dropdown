@@ -690,7 +690,6 @@ const useFocus = ({ disabled, onFocus }) => {
       (e) => {
         const focused2 = isFocused(e.currentTarget);
         setState((p) => ({
-          ...p,
           focused: focused2,
           closed: focused2 ? p?.closed : true
         }));
