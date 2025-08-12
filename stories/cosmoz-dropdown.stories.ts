@@ -69,6 +69,7 @@ export const DropdownWithBug: Story = {
 					<div>Item 3</div>
 					<div>Item 4</div>
 					<div>Item 5</div>
+					<a href="#diamond">Achor 1</a>
 				</cosmoz-dropdown>
 			</div>
 			<div class="overlay"></div>`;

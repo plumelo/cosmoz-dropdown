@@ -22,9 +22,14 @@ export const useFocus = ({ disabled, onFocus }: UseFocusOpts) => {
 		),
 		onToggle = useCallback((e: Event) => {
 			const target = e.currentTarget as HTMLElement;
-			return isFocused(target)
-				? setState((p) => ({ focused: true, closed: !p?.closed }))
-				: target.focus();
+			const currentlyFocused = isFocused(target);
+
+			if (currentlyFocused) {
+				setState((p) => ({ focused: true, closed: !p?.closed }));
+			} else {
+				target.focus();
+				setState(() => ({ focused: true, closed: false }));
+			}
 		}, []);
 
 	useEffect(() => {
@@ -56,7 +61,11 @@ export const useFocus = ({ disabled, onFocus }: UseFocusOpts) => {
 		onFocus: useCallback(
 			(e: FocusEvent) => {
 				const focused = isFocused(e.currentTarget as HTMLElement);
-				setState({ focused });
+				setState((p) => ({
+					...p,
+					focused,
+					closed: focused ? p?.closed : true,
+				}));
 				meta.onFocus?.(focused);
 			},
 			[meta],
