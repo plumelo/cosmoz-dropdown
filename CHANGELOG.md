@@ -1,3 +1,13 @@
+## [6.3.0](https://github.com/neovici/cosmoz-dropdown/compare/v6.2.1...v6.3.0) (2025-08-12)
+
+### Features
+
+* **cosmoz-dropdown:** add variable for hover color ([3bca65d](https://github.com/neovici/cosmoz-dropdown/commit/3bca65d96584d0e74d5c0a83c363484df210ab9e))
+
+### Bug Fixes
+
+* **dropdown:** dry ([ce4fb53](https://github.com/neovici/cosmoz-dropdown/commit/ce4fb53e0fcfafc8619c28b5b10b1a42acd97f07))
+
 ## [6.2.1](https://github.com/neovici/cosmoz-dropdown/compare/v6.2.0...v6.2.1) (2025-08-04)
 
 ### Bug Fixes
